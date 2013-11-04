@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   serialize :latest_feed
   has_many :posts
 
+  has_many :recruitments
+  has_many :recruits, :through => :recruitments
+
   validates_presence_of :provider
   validates_presence_of :uid
 
