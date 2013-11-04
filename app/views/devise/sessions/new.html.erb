@@ -1,11 +1,11 @@
 <div class="row-fluid">
   <div id="sign-in-text">
     <div id="sign-in-message">
-      <h1><%= t('login.message') %></h1>
+      <h1><b><%= t('login.message') %></b></h1>
     </div>
     <div id="sign-in-button">
-      <%= link_to user_omniauth_authorize_path(:facebook), :class => 'btn btn-info btn-large' do %>
-        <i class="icon-facebook"></i>  Sign in with Facebook</a>
+      <%= link_to user_omniauth_authorize_path(:facebook), :class => 'btn btn-info btn-large btn-block' do %>
+        <i class="icon-facebook"></i> Sign in with Facebook
       <% end %>
     </div>
   </div>
