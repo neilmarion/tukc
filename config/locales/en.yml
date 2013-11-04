@@ -107,7 +107,7 @@ en:
     reputations:
       tooltip: "This is your reputation!" 
   login:
-    message: "Contribute your knowledge to our beloved UPLB"
+    message: "The Ultimate Kadiwa Challenge"
   footer:
     about: "about"
     github: "github"
