@@ -1,26 +1,123 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activerecord:
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: "Please put a title"
+            tag_list:
+              blank: "Please put at least one tag"
+              invalid: "Tags cannot have spaces"
+            content:
+              blank: "Please put a content"
+          violations:
+            self_vote: "You cannot vote for your own post"
   general:
-    title: "mbkmrk"
-  errors:
-    verify_token: "Failed to authorize facebook challenge request"
+    title: "The Ultimate Kadiwa Challenge"
+    sign_in_with_facebook: "Sign in with Facebook"  
+    just_now: "just now"
+  layouts:
+    application:
+  posts:
+    index:
+      search: "Search" 
+      or: "or"
+    post:
+      title:
+        a: "A: "
+        q: "Q: "
+      reputations:
+        votes: "%{votes} votes"
+        answers: "%{answers_count} answers"
+      controls:
+        expand: 'expand'
+        collapse: 'collapse'
+        share: 'share'
+        vote-up: 'vote-up'
+        vote-down: 'vote-down'
+        unvote: 'unvote'
+  questions:
+    submit:
+      post: "Post"
+    update_submit:
+      update: "Update"
+    show:
+      answer: 'Answer this question'
+    notice: "Successfully answered question"
+    form:
+      title: "Title of your question"
+      content: "What's your question? But please write in english. Because for now it's more findable."
+      tags: "At least a tag"
+    errors:
+      login_first: "Please login first before answering a question"
+    post:
+      controls:
+        delete: "delete"
+        delete_question_confirm: "Are you sure you wanted to remove this question? Eh?"
+        delete_answer_confirm: "Are you sure you wanted to remove this answer? Weh?"
+        share: "share"
+        edit: "edit"
+  answers:
+    form:
+      answer: "What's your answer?" 
+    edit_form:
+      answer: "What's your answer?" 
+    update_submit:
+      update: "Update"
+      cancel: "Cancel"
+    errors:
+      destroy: "There's a problem deleting your answer. :("
+  comments:
+    comment:
+      commented: "%{time_ago} ago"
+    form:
+      comment: "Add a comment. Press enter to post it"
+    errors:
+      login_first: "Please login first before commenting :)"
+      destroy: "There's a problem deleting your comment. :("
+  shared:
+    home:
+      left:
+        results: "Results"
+        unanswered: "Unanswered"
+        top: "Top"
+        hot: "Hot"  
+        mine: "Mine"
+        recent: "Recent"
+        recent_users: "Recent Users"
+        top_users: "Top Users"
+    navbar:
+      user_links:
+        user_dropdown:
+          sign_out: "Sign out"
+    asker:
+      asked: "Asked %{time_ago} ago<br>"
+      answered: "Answered %{time_ago} ago<br>"
+      by: 'by'
+    search_field:
+      search_field:
+        search: "Search for Answers"
+      search_field_holder:
+        ask: "Ask"
+  user:
+    reputations:
+      tooltip: "This is your reputation!" 
+  login:
+    message: "Contribute your knowledge to our beloved UPLB"
+  footer:
+    about: "about"
+    github: "github"
+    facebook: "facebook"
+    bugs: "bugs"
+  facebook:
+    asked: "A question asked by "
+    answered: "A question answered by "
+    posted: "Posted by "
+  users:
+    search_field:
+      search_field: 
+        search: "Search for users"
