@@ -1,12 +1,17 @@
-<table class="table">
-  <tbody>
+<div class="explain-title explain-row">
+  <h2>Mga naimbitahan</h2>
+</div>
+
+
+<div class="row-fluid">
     <% @recruits.each do |recruit| %>
-      <tr>
-        <td>
-          <%= recruit.name %>
-        </td>
-      </tr>
+      <div style="display: inline;">
+        <div class="span2" style="display: inline; margin-right: 30px">
+          <%= image_tag "http://graph.facebook.com/#{recruit.uid}/picture?width=200&height=200", class: "user_thumb_small circular" %>
+          <div style="text-align: center">
+              <%= recruit.name %>
+          </div>
+        </div>
+      </div>
     <% end %>
-    
-  </tbody>
-</table>
+</div>

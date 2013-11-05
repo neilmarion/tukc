@@ -12,11 +12,11 @@ class User < ActiveRecord::Base
   validates_presence_of :provider
   validates_presence_of :uid
 
-  def self.from_omniauth(auth)
-    where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+  def self.from_omniauth(auth, params)
+    where(auth.slice("provider", "uid")).first || create_from_omniauth(auth, params)
   end
 
-  def self.create_from_omniauth(auth)
+  def self.create_from_omniauth(auth, params)
     create! do |user|
       user.provider = auth["provider"]
       user.access_token = auth['credentials']['token']
@@ -39,6 +39,8 @@ class User < ActiveRecord::Base
           end
         end
       end
+
+      User.find(params['id']).recruits << user if params['id'] 
     end
   end
 

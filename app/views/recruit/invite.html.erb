@@ -1,6 +1,7 @@
 <h1>Ikaw ay iniimbitahan ni <%= @inviter.name %> upang dumalo ng Buwanang pulong ng Kadiwa sa Disyembre</h1>
-
     <div id="sign-in-button">
-   <%= link_to t('general.sign_in_with_facebook'), user_omniauth_authorize_path(:facebook, {:id => @inviter.id}), :class => 'btn btn-facebook btn-large' %>  
+      <%= link_to user_omniauth_authorize_path(:facebook, {:id => @inviter.id}), :class => 'btn btn-info btn-large btn-block' do %>
+        <i class="icon-facebook"></i> Sign in with Facebook
+      <% end %>
     </div>
 
