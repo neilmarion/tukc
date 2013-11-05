@@ -1,7 +1,18 @@
-<h1>Ikaw ay iniimbitahan ni <%= @inviter.name %> upang dumalo ng Buwanang pulong ng Kadiwa sa Disyembre</h1>
-    <div id="sign-in-button">
-      <%= link_to user_omniauth_authorize_path(:facebook, {:id => @inviter.id}), :class => 'btn btn-info btn-large btn-block' do %>
-        <i class="icon-facebook"></i> Sign in with Facebook
-      <% end %>
-    </div>
 
+<div class="row-fluid">
+  <div style="text-align: center" class="row-fluid">
+    <div>
+      <div>
+      <%= image_tag "http://graph.facebook.com/#{@inviter.uid}/picture?width=200&height=200", class: "user_thumb_small circular", style: "width:200px" %>
+      </div>
+      <div style="font-size: 1em; margin-top: 30px">
+        Ikaw ay iniimbitahan ni <br><b><%= link_to @inviter.name, "http://facebook.com/#{@inviter.uid}" %></b><br> upang dumalo ng Buwanang <br>pulong ng Kadiwa sa Disyembre
+      </div>
+    </div>
+  </div>
+  <div id="sign-in-button">
+    <%= link_to user_omniauth_authorize_path(:facebook, {:id => @inviter.id}), :class => 'btn btn-info btn-large btn-block' do %>
+      <i class="icon-facebook"></i> Sign in with Facebook
+    <% end %>
+  </div>
+</div>
