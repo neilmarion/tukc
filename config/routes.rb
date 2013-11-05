@@ -15,7 +15,10 @@ Mbkmrk::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+
   get 'recruit/:id' => 'recruit#invite'
+  get 'posts/home' => 'posts#home'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

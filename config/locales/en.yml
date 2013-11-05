@@ -94,6 +94,7 @@ en:
       user_links:
         user_dropdown:
           sign_out: "Sign out"
+          home: "Home"
     asker:
       asked: "Asked %{time_ago} ago<br>"
       answered: "Answered %{time_ago} ago<br>"

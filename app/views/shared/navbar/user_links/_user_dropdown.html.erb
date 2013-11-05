@@ -5,6 +5,12 @@
   </a>
   <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
     <li role="presentation">
+      <%= link_to t('.home'), posts_home_path, :role => "menuitem", class: 'user-link'  %>
+    </li>
+    <li role="presentation">
+      <%= link_to t('.dashboard'), root_path, :role => "menuitem", class: 'user-link'  %>
+    </li>
+    <li role="presentation">
       <%= link_to t('.sign_out'), destroy_user_session_path, method: :delete, :role => "menuitem", class: 'user-link'  %>
     </li>
   </ul>

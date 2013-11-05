@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   
   def index
     @recruits = current_user.recruits.order('created_at DESC')
+  end
+
+  def home
 
   end
 end
