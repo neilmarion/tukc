@@ -1,6 +1,6 @@
 set :user, "deployer"
 set :branch, "staging"
-set :application, "overheard_staging"
+set :application, "tukc_staging"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 
 set :rails_env, "staging"
@@ -10,8 +10,6 @@ namespace :deploy do
     desc "restarting nginx"
     task command, roles: :app, except: {no_release: true} do
       sudo "service nginx restart"
-      run "crontab -r"
-      run "crontab cron/production-staging-start-crontab.txt"
     end 
   end 
 

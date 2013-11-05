@@ -5,7 +5,7 @@ server "106.187.44.184", :web, :app, :db, primary: true
 set :stages, %w(production staging)
 set :default_stage, "staging"
 
-set :repo, "mbkmrk"
+set :repo, "tukc"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 

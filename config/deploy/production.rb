@@ -1,16 +1,12 @@
 set :user, "deployer"
 set :branch, "master"
-set :application, "mbkmrk"
+set :application, "tukc"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 
 set :rails_env, "production"
 
 namespace :deploy do
   %w[start stop restart].each do |command|
-    desc "restarting resque workers"
-    task :restart_workers, roles: :db do
-      run_remote_rake "resque:restart_workers"
-    end 
     desc "restarting nginx"
     task command, roles: :app, except: {no_release: true} do
       sudo "service nginx restart" 
