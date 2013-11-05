@@ -17,7 +17,7 @@ en:
           violations:
             self_vote: "You cannot vote for your own post"
   general:
-    title: "The Ultimate Kadiwa Challenge"
+    title: "The Ultimate Kadiwa Invite Challenge"
     sign_in_with_facebook: "Sign in with Facebook"  
     just_now: "just now"
   layouts:
@@ -107,7 +107,7 @@ en:
     reputations:
       tooltip: "This is your reputation!" 
   login:
-    message: "The Ultimate Kadiwa Challenge"
+    message: "The Ultimate Kadiwa Invite Challenge"
   footer:
     about: "about"
     github: "github"
